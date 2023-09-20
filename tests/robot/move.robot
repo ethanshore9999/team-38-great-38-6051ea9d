@@ -44,12 +44,12 @@ Move on edge of board   5           0           WEST        4       0
  
 *** Keywords ***
 Move character
-    [Arguments] ${startingX}    ${startingY}    ${directions}   ${endingX}  ${endingY}
-    Initialize character xposition with ${startingX}
-    Initialize character yposition with ${startingY}
-    Move in direction                   ${direction}
-    Character xposition should be       ${endingX}
-    Character yposition should be       ${endingY}
+    [Arguments]     ${startingX}    ${startingY}    ${direction}   ${endingX}  ${endingY}
+    Initialize character xposition with     ${startingX}
+    Initialize character yposition with     ${startingY}
+    Move in direction                       ${direction}
+    Character xposition should be           ${endingX}
+    Character yposition should be           ${endingY}
 Documentation
 	This is the test robot file
 	/config/workspace/images/levelup/images/Triton.png
