@@ -50,3 +50,6 @@ Move character
     Move in direction                   ${direction}
     Character xposition should be       ${endingX}
     Character yposition should be       ${endingY}
+Documentation
+	This is the test robot file
+	/config/workspace/images/levelup/images/Triton.png
