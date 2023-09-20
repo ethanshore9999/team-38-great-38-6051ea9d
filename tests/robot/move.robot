@@ -1,5 +1,5 @@
 *** Settings ****
-Documentation   I want to move my character.If they attempt to move past a boundry,the move results in no change in position.
+Documentation   I want to move my character.If they attempt to move past a boundry,the move results in no change in position. This is the test robot file https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlP82gQo_Qkw0xMaLKoAcMR3t7jMQMo6fZew&usqp=CAU
 Test Template   Move character
 Library         MoveLibrary.py
 
@@ -50,6 +50,3 @@ Move character
     Move in direction                       ${direction}
     Character xposition should be           ${endingX}
     Character yposition should be           ${endingY}
-Documentation
-	This is the test robot file
-	/config/workspace/images/levelup/images/Triton.png
