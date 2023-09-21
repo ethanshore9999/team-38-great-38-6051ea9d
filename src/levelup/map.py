@@ -20,12 +20,18 @@ class Map:
 
     def getTotalPositions(self):
         return self.numPositions;
-# TODO
+
     def getPositions(self):
         return self.map_data;
     
-    def calculatePosition(self, ):
+    def calculatePosition(self, startingPosition, direction):
         return self.calculatePosition;
 
-    def isPositionValid(self):
-        return self.isPositionValid;
+    def isPositionValid(self, positionCoordinates):
+        x = positionCoordinates.position[0]
+        y = positionCoordinates.position[1]
+        if (x < 0 or x > 9):
+            return False
+        if (y < 0 or y > 9):
+            return False
+        return True            

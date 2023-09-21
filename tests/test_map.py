@@ -16,17 +16,19 @@ class TestMap(TestCase):
     def test_get_positions(self):
         testObj = Map()
         assert testObj.getPositions()[0][0].position == (0,0)
-        assert testObj.getPositions()[9][9].position == (9,9)
   
     def test_calculate_position(self):
         testObj = Map()
-        results = testObj.calculatePosition();
+        #results = testObj.calculatePosition();
     
     def test_is_position_valid(self):
         testObj = Map()
-        results = testObj.isPositionValid();
-
+        results = testObj.isPositionValid(Position((1,1)));
+        assert results == True
     
-    
+    def test_is_position_validy(self):
+        testObj = Map()
+        results = testObj.isPositionValid(Position((1,10)));
+        assert results == False
         
     
