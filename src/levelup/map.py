@@ -17,5 +17,7 @@ class Map:
         return self.arrPositions;
     
     def calculatePosition(self):
-        self.calculatePosition = [3,4];
         return self.calculatePosition;
+
+    def isPositionValid(self):
+        return self.isPositionValid;

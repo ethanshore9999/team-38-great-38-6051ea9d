@@ -17,5 +17,11 @@ class TestMap(TestCase):
         testObj = Map()
         results = testObj.calculatePosition();
     
+    def test_is_position_valid(self):
+        testObj = Map()
+        results = testObj.isPositionValid();
+
+    
+    
         
     
