@@ -1,5 +1,6 @@
 from unittest import TestCase
 from levelup.map import Map
+from levelup.position import Position
 
 class TestMap(TestCase):
 

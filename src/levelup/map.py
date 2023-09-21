@@ -14,6 +14,7 @@ class Map:
         return self.numPositions;
 
     def getPositions(self):
+        
         return self.getPositions;
     
     def calculatePosition(self):
