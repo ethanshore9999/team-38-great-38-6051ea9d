@@ -15,7 +15,8 @@ class TestMap(TestCase):
 
     def test_get_positions(self):
         testObj = Map()
-        results = testObj.getPositions();
+        assert testObj.getPositions()[0][0].position == (0,0)
+        assert testObj.getPositions()[9][9].position == (9,9)
   
     def test_calculate_position(self):
         testObj = Map()

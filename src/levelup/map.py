@@ -22,7 +22,7 @@ class Map:
         return self.numPositions;
 # TODO
     def getPositions(self):
-        return self.getPositions;
+        return self.map_data;
     
     def calculatePosition(self, ):
         return self.calculatePosition;
