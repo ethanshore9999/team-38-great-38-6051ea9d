@@ -8,4 +8,6 @@ class TestGameMap(TestCase):
         results = testObj.getTotalPositions();
         assert results == 100;
 
+        
+
     
