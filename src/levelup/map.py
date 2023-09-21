@@ -1,6 +1,7 @@
 class Map:
     numPositions = 100;
     arrPositions = [0,0];
+    calculatePosition = [0,0];
     
        
     def __init__(self):
@@ -14,3 +15,7 @@ class Map:
 
     def getPositions(self):
         return self.arrPositions;
+    
+    def calculatePosition(self):
+        self.calculatePosition = [3,4];
+        return self.calculatePosition;
