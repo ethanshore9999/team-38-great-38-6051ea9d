@@ -1,6 +1,7 @@
 import logging
 from dataclasses import dataclass
 from enum import Enum
+from levelup.position import Position
 
 
 DEFAULT_CHARACTER_NAME = "Character"
@@ -45,14 +46,22 @@ class GameController:
         else:
             self.status.character_name = DEFAULT_CHARACTER_NAME
 
-    def move(self, direction: Direction) -> None:
+    def move(self, direction: Direction):
         # TODO: Implement move - should call something on another class
         # TODO: Should probably also update the game results
-        pass
+        current_position: tuple = Position.getPosition(self);
+       # if direction == 'N':
+       
+        self.set_character_position([1,1])
+        #if direction == 'E':
+         #   self.set_character_position(self,(current_position.x_ord+1,current_position.y_ord))
+        
 
-    def set_character_position(self, xycoordinates: tuple) -> None:
+    def set_character_position(self, xycoordinates: tuple):
         # TODO: IMPLEMENT THIS TO SET CHARACTERS CURRENT POSITION -- exists to be testable
-        pass
+        
+       # position.setPosition(xycoordinates.x_ord,xycoordinates.y_ord)
+        return
 
     def set_current_move_count(self, move_count: int) -> None:
         # TODO: IMPLEMENT THIS TO SET CURRENT MOVE COUNT -- exists to be testable
