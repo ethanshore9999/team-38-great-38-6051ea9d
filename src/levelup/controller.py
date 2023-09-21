@@ -49,10 +49,10 @@ class GameController:
     def move(self, direction: Direction):
         # TODO: Implement move - should call something on another class
         # TODO: Should probably also update the game results
-        current_position: tuple = Position.getPosition(self);
+        current_position: tuple = character.getPosition()
        # if direction == 'N':
-       
-        self.set_character_position([1,1])
+       #map.calcualatePosition(current_position,direction)
+        #self.set_character_position((1,1))
         #if direction == 'E':
          #   self.set_character_position(self,(current_position.x_ord+1,current_position.y_ord))
         
