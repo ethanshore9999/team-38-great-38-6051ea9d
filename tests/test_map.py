@@ -7,3 +7,5 @@ class TestGameMap(TestCase):
         testObj = Map()
         results = testObj.getTotalPositions();
         assert results == 100;
+
+    
