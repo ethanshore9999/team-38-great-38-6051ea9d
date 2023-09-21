@@ -8,6 +8,9 @@ class TestGameMap(TestCase):
         results = testObj.getTotalPositions();
         assert results == 100;
 
+    def test_get_positions(self):
+        testObj = Map()
+        results = testObj.getPositions();
+        assert results == [0,0];  
         
-
     

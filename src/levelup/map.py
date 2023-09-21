@@ -1,5 +1,7 @@
 class Map:
     numPositions = 100;
+    arrPositions = [0,0];
+    
        
     def __init__(self):
         self.map_data = []
@@ -9,3 +11,6 @@ class Map:
 
     def getTotalPositions(self):
         return self.numPositions;
+
+    def getPositions(self):
+        return self.arrPositions;
