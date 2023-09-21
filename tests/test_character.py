@@ -1,6 +1,8 @@
 from unittest import TestCase
 from levelup.character import Character
 from levelup.map import Map
+from levelup.position import Position
+
 class TestCharacterInitWithName(TestCase):
     def test_init(self):
         ARBITRARY_NAME = "MyName"
@@ -18,3 +20,10 @@ class TestCharacterInitWithName(TestCase):
         ARBITRARY_NAME = "Bob";
         testobj = Character(ARBITRARY_NAME);
         testobj.enterMap(map)
+
+    def test_getPosition(self):
+        ARBITRARY_NAME = (5,5);
+        testobj = Position(ARBITRARY_NAME);    
+        result = testobj.getPosition()
+
+     
