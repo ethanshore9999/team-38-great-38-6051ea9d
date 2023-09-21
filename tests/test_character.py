@@ -8,7 +8,7 @@ class TestCharacterInitWithName(TestCase):
         self.assertEqual(ARBITRARY_NAME, testobj.name)
     
     def test_get_name(self):
-        ARBITRARY_NAME = "Bob"
+        ARBITRARY_NAME = "Bobby"
         testobj = Character(ARBITRARY_NAME);
         result = testobj.getName();
         self.assertEqual(ARBITRARY_NAME, result)
