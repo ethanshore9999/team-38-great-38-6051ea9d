@@ -9,11 +9,11 @@ from levelup.map import Direction
 
 class TestMap(TestCase):
     bottomLeftBoundary = (0,0)
-    topRighttBoundary = (9,9)
+    topRightBoundary = (9,9)
     def test_init(self):
         testObj = Map()
         assert testObj.map_data[0][0].position == self.bottomLeftBoundary
-        assert testObj.map_data[9][9].position == self.topRighttBoundary
+        assert testObj.map_data[9][9].position == self.topRightBoundary
 
     def test_get_total_positions(self):
         testObj = Map()
@@ -23,7 +23,7 @@ class TestMap(TestCase):
     def test_get_positions(self):
         testObj = Map()
         assert testObj.getPositions()[0][0].position == self.bottomLeftBoundary
-        assert testObj.getPositions()[9][9].position == self.topRighttBoundary
+        assert testObj.getPositions()[9][9].position == self.topRightBoundary
 
     def test_calculate_position(self):
         testObj = Map()

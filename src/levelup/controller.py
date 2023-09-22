@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from levelup.position import Position
 from levelup.map import Map
 from levelup.map import Direction
+from levelup.character import Character
 
 
 DEFAULT_CHARACTER_NAME = "Character"
@@ -45,7 +46,7 @@ class GameController:
     def move(self, direction: Direction):
         # TODO: Implement move - should call something on another class
         # TODO: Should probably also update the game results
-        current_position: tuple = Position.getPosition(self)     
+        current_position: tuple = Character.getPosition(self)  
         #new_position: tuple= Map.calculatePosition(self,current_position,direction)
         #self.set_character_position(new_position)
    
