@@ -1,8 +1,7 @@
 from levelup.position import Position
 class Character:
     name = ""
-    currentPosition = Position()
-
+    
     def __init__(self, character_name):
         self.name = character_name
 

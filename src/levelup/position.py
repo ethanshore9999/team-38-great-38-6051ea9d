@@ -5,8 +5,8 @@ class Position:
     def __init__(self, xycoordinates: tuple):
         self.position:tuple = xycoordinates
 
-   # def getPosition(self):
-    #    return
+    def getPosition(self):
+        return
 
     def setPosition(self,xycoordinates: tuple):
         self.position:tuple  = (x_ord, y_ord)
