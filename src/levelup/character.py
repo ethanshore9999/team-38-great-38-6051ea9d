@@ -1,9 +1,10 @@
 from levelup.position import Position
+from levelup.map import Map
 
 class Character:
     name = ""
-    currentPos = Position((0,0))
-    
+    currentPosition = Position((0,0))
+    map = Map()
     
     def __init__(self, character_name):
         self.name = character_name        
@@ -12,9 +13,10 @@ class Character:
         return self.name
     
     def enterMap(self, map):
+        self.map = map
         return 
 
     def getPosition(self):
-     return self.currentPos
+     return self.currentPosition
     
     
