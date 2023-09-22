@@ -1,7 +1,8 @@
 import logging
 from dataclasses import dataclass
-from enum import Enum
 from levelup.position import Position
+from levelup.map import Map
+from levelup.map import Direction
 
 
 DEFAULT_CHARACTER_NAME = "Character"
@@ -15,11 +16,6 @@ class GameStatus:
     current_position: tuple = (-100,-100)
     move_count: int = 0
 
-class Direction(Enum):
-    NORTH = "n"
-    SOUTH = "s"
-    EAST = "e"
-    WEST = "w"
 
 class CharacterNotFoundException(Exception):
     pass
@@ -49,13 +45,11 @@ class GameController:
     def move(self, direction: Direction):
         # TODO: Implement move - should call something on another class
         # TODO: Should probably also update the game results
-        current_position: tuple = Position.getPosition(self)
-     
-       #map.calcualatePosition(current_position,direction)
-        #self.set_character_position((1,1))
+        current_position: tuple = Position.getPosition(self)     
+        #new_position: tuple = Map.calculatePosition(self,current_position,direction)
+        #self.set_character_position(new_position)
    
-         #   self.set_character_position(self,(current_position.x_ord+1,current_position.y_ord))
-        
+       
 
     def set_character_position(self, xycoordinates: tuple):
         # TODO: IMPLEMENT THIS TO SET CHARACTERS CURRENT POSITION -- exists to be testable

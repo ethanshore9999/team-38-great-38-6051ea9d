@@ -1,5 +1,11 @@
 from levelup.position import Position
-from levelup.controller import Direction
+from enum import Enum
+
+class Direction(Enum):
+    NORTH = "n"
+    SOUTH = "s"
+    EAST = "e"
+    WEST = "w"
 class Map:
     numPositions = 100;
     map_data = [0,0];
