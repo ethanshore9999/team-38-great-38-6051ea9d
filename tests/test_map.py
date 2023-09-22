@@ -7,10 +7,12 @@ from levelup.map import Map
 from levelup.position import Position
 
 class TestMap(TestCase):
+    bottomLeftBoundary = (0,0)
+    topRighttBoundary = (9,9)
     def test_init(self):
         testObj = Map()
-        assert testObj.map_data[0][0].position == (0,0)
-        assert testObj.map_data[9][9].position == (9,9)
+        assert testObj.map_data[0][0].position == self.bottomLeftBoundary
+        assert testObj.map_data[9][9].position == self.topRighttBoundary
 
     def test_get_total_positions(self):
         testObj = Map()
@@ -19,20 +21,23 @@ class TestMap(TestCase):
 
     def test_get_positions(self):
         testObj = Map()
-        assert testObj.getPositions()[0][0].position == (0,0)
-  
+        assert testObj.getPositions()[0][0].position == self.bottomLeftBoundary
+        assert testObj.getPositions()[9][9].position == self.topRighttBoundary
+
     def test_calculate_position(self):
         testObj = Map()
         #results = testObj.calculatePosition();
     
-    def test_is_position_valid(self):
+    def test_position_inBounds(self):
         testObj = Map()
         results = testObj.isPositionValid(Position((1,1)));
         assert results == True
     
-    def test_is_position_validy(self):
+    def test_position_outOfBounds(self):
         testObj = Map()
         results = testObj.isPositionValid(Position((1,10)));
+        results = testObj.isPositionValid(Position((10,1)));
+        results = testObj.isPositionValid(Position((-1,5)));
+        results = testObj.isPositionValid(Position((5,-1)));
         assert results == False
         
-    
