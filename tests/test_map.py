@@ -5,6 +5,7 @@
 from unittest import TestCase
 from levelup.map import Map
 from levelup.position import Position
+from levelup.map import Direction
 
 class TestMap(TestCase):
     bottomLeftBoundary = (0,0)
@@ -26,7 +27,15 @@ class TestMap(TestCase):
 
     def test_calculate_position(self):
         testObj = Map()
-        #results = testObj.calculatePosition();
+        currentPosition =  Position((1,1))
+        results = testObj.calculatePosition(currentPosition,Direction.NORTH);
+        assert results.position == (1,2)
+
+    def test_calculate_position_fail(self):
+        testObj = Map()
+        currentPosition =  Position((1,2))
+        results = testObj.calculatePosition(currentPosition,Direction.NORTH);
+        assert results.position == (1,3)
     
     def test_position_inBounds(self):
         testObj = Map()

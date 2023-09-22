@@ -23,7 +23,7 @@ class TestCharacterInitWithName(TestCase):
 
     def test_getPosition(self):
         ARBITRARY_NAME = (5,5);
-        #testobj = Character(ARBITRARY_NAME);    
-        #result = testobj.getPosition()
+        testobj = Character(ARBITRARY_NAME);    
+        result = testobj.getPosition()
 
      

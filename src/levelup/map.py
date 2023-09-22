@@ -42,8 +42,8 @@ class Map:
             new_x -= 1
         elif direction == Direction.EAST:
             new_x += 1  
-        new_position = Positions(new_x, new_y)      
-        result = isPositionValid(new_position)
+        new_position = Position((new_x, new_y))      
+        result = self.isPositionValid(new_position)
         if result == True:
             return new_position
         else:
