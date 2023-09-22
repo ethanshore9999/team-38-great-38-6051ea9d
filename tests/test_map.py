@@ -1,3 +1,7 @@
+# This file accommodates testing of map.py, including initialization
+# while testing placing the char on opposite corners of the map,
+# getting the position, getting total positions, etc.
+
 from unittest import TestCase
 from levelup.map import Map
 from levelup.position import Position
