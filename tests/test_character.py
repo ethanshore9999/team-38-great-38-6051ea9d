@@ -22,8 +22,8 @@ class TestCharacterInitWithName(TestCase):
         testobj.enterMap(map)
 
     def test_getPosition(self):
-        ARBITRARY_NAME = (5,5);
-        testobj = Character(ARBITRARY_NAME);    
+        ARBITRARY_POSITION = (5,5);
+        testobj = Character(ARBITRARY_POSITION);    
         result = testobj.getPosition()
 
      
