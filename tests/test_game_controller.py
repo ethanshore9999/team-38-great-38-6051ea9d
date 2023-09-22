@@ -16,4 +16,4 @@ class TestGameController(TestCase):
     def test_move(self):
         testObj = GameController()
         #result = testObj.move(Direction.NORTH)
-        #assert testObj.status != None
+        assert testObj.status != None

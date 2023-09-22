@@ -27,8 +27,8 @@ class InvalidMoveException(Exception):
 class GameController:
 
 
-    status: GameStatus
-
+    status: GameStatus    
+    currentPosition: Position
     def __init__(self):
         self.status = GameStatus()
 
@@ -46,9 +46,9 @@ class GameController:
     def move(self, direction: Direction):
         # TODO: Implement move - should call something on another class
         # TODO: Should probably also update the game results
-        current_position: tuple = Character.getPosition(self)  
-        #new_position: tuple= Map.calculatePosition(self,current_position,direction)
-        #self.set_character_position(new_position)
+        self.current_position = Character.getPosition(self)  
+        new_position: tuple= Map.calculatePosition(self,self.current_position,direction)
+        self.set_character_position(new_position)
    
        
 
